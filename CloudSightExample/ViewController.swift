@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        setUpViews()
         CloudSightConnection.sharedInstance().consumerKey = "your-key";
         CloudSightConnection.sharedInstance().consumerSecret = "your-secret";
         
