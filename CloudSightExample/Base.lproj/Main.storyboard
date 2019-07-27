@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CloudSightExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YTU-Li-rgn"/>
+                        <viewControllerLayoutGuide type="bottom" id="4eN-J0-34e"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GPV-u3-K46">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddC-p8-wMt" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-11-aX1">
+                                        <rect key="frame" x="20" y="75" width="335" height="167.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please take a picture" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egk-XE-YfF">
+                                        <rect key="frame" x="20" y="342.5" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Day-Bc-kwy">
+                                        <rect key="frame" x="20" y="463" width="335" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-mF-S58">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ydD-kt-ago"/>
+                                                </constraints>
+                                                <state key="normal" title="Take a picture">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oim-fb-jsI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyV-ZS-mdw">
+                                                <rect key="frame" x="0.0" y="50" width="335" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Fw9-ip-0Vh"/>
+                                                </constraints>
+                                                <state key="normal" title="Search">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ht-Ya-6IK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Day-Bc-kwy" secondAttribute="trailing" constant="20" id="5au-YE-L4K"/>
+                                    <constraint firstAttribute="trailing" secondItem="egk-XE-YfF" secondAttribute="trailing" constant="20" id="8sY-0N-I0x"/>
+                                    <constraint firstItem="wmX-11-aX1" firstAttribute="leading" secondItem="ddC-p8-wMt" secondAttribute="leading" constant="20" id="DrM-VQ-sb2"/>
+                                    <constraint firstItem="egk-XE-YfF" firstAttribute="leading" secondItem="ddC-p8-wMt" secondAttribute="leading" constant="20" id="MPz-IU-xxq"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Day-Bc-kwy" secondAttribute="bottom" constant="50" id="TW6-xy-SS5"/>
+                                    <constraint firstItem="Day-Bc-kwy" firstAttribute="leading" secondItem="ddC-p8-wMt" secondAttribute="leading" constant="20" id="U9l-cS-D7X"/>
+                                    <constraint firstAttribute="trailing" secondItem="wmX-11-aX1" secondAttribute="trailing" constant="20" id="YGJ-LP-0SC"/>
+                                    <constraint firstItem="wmX-11-aX1" firstAttribute="width" secondItem="wmX-11-aX1" secondAttribute="height" multiplier="2:1" id="ezh-MQ-Way"/>
+                                    <constraint firstItem="wmX-11-aX1" firstAttribute="top" secondItem="ddC-p8-wMt" secondAttribute="top" constant="75" id="fFi-c8-Edq"/>
+                                    <constraint firstItem="egk-XE-YfF" firstAttribute="top" secondItem="wmX-11-aX1" secondAttribute="bottom" constant="100" id="swL-df-Al8"/>
+                                    <constraint firstItem="Day-Bc-kwy" firstAttribute="top" secondItem="egk-XE-YfF" secondAttribute="bottom" constant="100" id="uEe-nf-lKu"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vup-C3-7NX">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ddC-p8-wMt" firstAttribute="leading" secondItem="GPV-u3-K46" secondAttribute="leading" id="77H-vk-lni"/>
+                            <constraint firstAttribute="trailing" secondItem="ddC-p8-wMt" secondAttribute="trailing" id="9rM-EP-VWG"/>
+                            <constraint firstItem="vup-C3-7NX" firstAttribute="centerY" secondItem="GPV-u3-K46" secondAttribute="centerY" id="QVk-S4-ZN9"/>
+                            <constraint firstItem="ddC-p8-wMt" firstAttribute="centerX" secondItem="GPV-u3-K46" secondAttribute="centerX" id="RGw-z5-p2l"/>
+                            <constraint firstItem="ddC-p8-wMt" firstAttribute="centerY" secondItem="GPV-u3-K46" secondAttribute="centerY" priority="750" id="d9J-ss-f64"/>
+                            <constraint firstItem="ddC-p8-wMt" firstAttribute="top" secondItem="GPV-u3-K46" secondAttribute="top" id="qsq-X0-G1U"/>
+                            <constraint firstAttribute="bottom" secondItem="ddC-p8-wMt" secondAttribute="bottom" id="trj-fA-fFp"/>
+                            <constraint firstItem="vup-C3-7NX" firstAttribute="centerX" secondItem="GPV-u3-K46" secondAttribute="centerX" id="wav-dR-onf"/>
+                        </constraints>
+                    </scrollView>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="vup-C3-7NX" id="eFy-Hj-hXe"/>
+                        <outlet property="button" destination="Qeh-mF-S58" id="SfC-E9-OTH"/>
+                        <outlet property="contentView" destination="ddC-p8-wMt" id="3Kh-4k-QFF"/>
+                        <outlet property="imageView" destination="wmX-11-aX1" id="6y8-9B-fjF"/>
+                        <outlet property="resultLabel" destination="egk-XE-YfF" id="XeK-gg-CWd"/>
+                        <outlet property="searchButton" destination="RyV-ZS-mdw" id="OJl-y6-WLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="141.67916041979012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default_photo" width="168" height="114.5"/>
+    </resources>
+</document>

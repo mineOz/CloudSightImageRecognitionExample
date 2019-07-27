@@ -1,0 +1,24 @@
+PODS:
+  - BFOAuth (1.0.1)
+  - CloudSight (1.0.4):
+    - BFOAuth (~> 1.0)
+    - RequestUtils (~> 1.1)
+  - RequestUtils (1.1.2)
+
+DEPENDENCIES:
+  - CloudSight
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BFOAuth
+    - CloudSight
+    - RequestUtils
+
+SPEC CHECKSUMS:
+  BFOAuth: e3c2e4eaae862a89bc301ed6f292d3cd0d6a107b
+  CloudSight: cbf69900984e30d16498d8282c1cd13b844c0071
+  RequestUtils: 0f04f89abca3936c6566e2f4c3ce5d252036bc89
+
+PODFILE CHECKSUM: 6d0bf76509372742a6ae28f037a7da2d293ac3eb
+
+COCOAPODS: 1.5.3
