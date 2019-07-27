@@ -20,12 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        button.layer.cornerRadius = 5
-        button.clipsToBounds = true
-        searchButton.layer.cornerRadius = 5
-        searchButton.clipsToBounds = true
-        searchButton.isHidden = true
-        
+       
         CloudSightConnection.sharedInstance().consumerKey = "your-key";
         CloudSightConnection.sharedInstance().consumerSecret = "your-secret";
         
@@ -82,7 +77,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.button.isEnabled = false
         activityIndicatorView.startAnimating()
     }
-    
+    func setUpViews(){
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
+        searchButton.layer.cornerRadius = 5
+        searchButton.clipsToBounds = true
+        searchButton.isHidden = true
+    }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
