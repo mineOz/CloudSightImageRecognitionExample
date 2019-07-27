@@ -1,2 +1,3 @@
 # CloudSightImageRecognitionExample
-Image recognition with CloudSight API
+Podfile
+pod "CloudSight", "~> 1.0"
